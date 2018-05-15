@@ -145,7 +145,7 @@ WKWebView是iOS8之后才有，所以如果你的app最低支持iOS可以尽情�
     }
 }
 ```
-一定要记得在dealloc一处监听
+一定要记得在dealloc方法移除监听名称
 ```
 [self.userContentController removeScriptMessageHandlerForName:@"event"];
 ```
