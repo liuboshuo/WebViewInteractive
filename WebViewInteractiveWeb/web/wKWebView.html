@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>标题</title>
+</head>
+<body style="background-color: purple">
+    <div>
+        <button onclick="openAlbum();">打开相册</button>
+    </div>
+    <script type="text/javascript">
+        function openAlbum(){
+            window.webkit.messageHandlers.event.postMessage("打开相册");
+        }
+        function testLog(str) {
+            window.webkit.messageHandlers.event.postMessage(str);
+            return "123"
+        }
+    </script>
+</body>
+</html>

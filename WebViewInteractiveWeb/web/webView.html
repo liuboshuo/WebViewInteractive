@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>标题</title>
+</head>
+<body style="background-color: purple">
+<div>
+    <h3>我是html</h3>
+    <div>
+        <input name="name" type="text" id="name"/>
+        <button onclick="changeText();">改变Label值</button>
+    </div>
+    <br/>
+    <button onclick="printLog();">webView的js条用native（输出日志）</button>
+</div>
+<script type="text/javascript">
+    function changeText() {
+        var value = document.getElementById("name").value;
+        log("输入的值="+value);
+        changeLabel(value);
+    }
+    function printLog(str){
+        log("oc已经调用function");
+        log("oc注入的方法");
+        log("注入的obj对象"+ obj.print);
+        obj.print(str);
+    }
+</script>
+</body>
+</html>
